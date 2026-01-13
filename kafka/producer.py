@@ -5,7 +5,7 @@ from datetime import datetime
 import time 
 
 
-def create_producer():  
+def create_producer():      
     producer = KafkaProducer(  
         bootstrap_servers=['localhost:9092'],
         value_serializer=lambda v: json.dumps(v).encode('utf-8')  

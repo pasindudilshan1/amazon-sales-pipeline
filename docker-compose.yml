@@ -37,7 +37,7 @@ services:
             - postgres-db-volume:/var/lib/postgresql/data
     
     airflow-webserver:
-        image: apache/airflow:2.7.3
+        image: apache/airflow:2.8.0
         container_name: airflow-webserver
         depends_on:
             - postgres
@@ -63,7 +63,7 @@ services:
             start_period: 30s
 
     airflow-scheduler:
-        image: apache/airflow:2.7.3
+        image: apache/airflow:2.8.0
         container_name: airflow-scheduler
         depends_on:
             - postgres
@@ -81,7 +81,7 @@ services:
         command: scheduler
 
     airflow-init:
-        image: apache/airflow:2.7.3
+        image: apache/airflow:2.8.0
         container_name: airflow-init
         depends_on:
             - postgres
